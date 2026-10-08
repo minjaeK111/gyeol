@@ -6,6 +6,8 @@
 npm install gyeol
 ```
 
+소개 사이트: https://minjaek111.github.io/gyeol/
+
 | 파일 | 쓰는 곳 |
 | --- | --- |
 | `gyeol.css` | 아무 웹 프로젝트(HTML, React, Vue, Svelte 등). 토큰, 팔레트, 테마, 겹 소재, 컴포넌트 클래스가 모두 들어 있어요. |
