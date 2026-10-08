@@ -51,6 +51,18 @@ color('meok', 'dark', 'accent'); // '#85aeff'
 - `data-palette`: `meok`(기본) · `jjok` · `cheongja` · `songhwa` · `yeonji` · `jaju`
 - `data-theme`: `dark`(기본) · `light` · `system`
 - 컴포넌트 클래스는 모두 `gy-` 접두사를 써서 기존 CSS와 겹치지 않아요.
+- 화면 일부만 다른 팔레트나 테마로 바꿀 수 있어요(0.1.2부터). 그 범위 안의 색과 글자색이 모두 다시 계산돼요.
+
+```html
+<html data-palette="meok" data-theme="dark">
+  <section data-palette="yeonji" data-theme="light">이 영역만 연지 · 라이트</section>
+  <section data-palette="cheongja">테마를 빼면 바깥 테마(다크)를 따라가요</section>
+</html>
+```
+
+```js
+setPalette('jaju', document.querySelector('#promo')); // 특정 요소에만 적용
+```
 
 | 컴포넌트 | 클래스 |
 | --- | --- |

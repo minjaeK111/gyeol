@@ -3,13 +3,26 @@
  * 사용법: <html data-palette="meok" data-theme="dark">
  *   data-palette: meok | jjok | cheongja | songhwa | yeonji | jaju   (기본 meok)
  *   data-theme:   dark | light | system                              (기본 dark)
+ * 화면 일부만 다른 팔레트·테마로: <section data-palette="yeonji" data-theme="light"> (0.1.2+)
  * 모든 컴포넌트 클래스는 gy- 접두사를 써서 다른 CSS와 충돌하지 않아요.
  * 글꼴: https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap
  */
 
 /* ---------- tokens ---------- */
 :root{
-  --h:255; --c:.012; --ah:var(--h); --ac:var(--c);
+  --h:255; --c:.012; --ah:265; --ac:.14;   /* 기본 팔레트: 먹 + 쪽빛 강조 */
+  --f-display: "Hahmlet", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+  --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
+
+  --pun-1:4px; --pun-2:8px; --pun-3:12px; --pun-4:16px; --pun-6:24px; --pun-8:32px; --pun-12:48px; --pun-16:64px;
+  --r-1:6px; --r-2:12px; --r-3:20px; --r-4:28px; --r-pill:999px;
+  --ease-bleed: cubic-bezier(.2,.7,.2,1);
+  --t-1:120ms; --t-2:220ms; --t-3:420ms;
+
+}
+/* 색 토큰: 루트와, 팔레트·테마를 따로 지정한 모든 요소에서 다시 계산돼요 */
+:root, [data-palette], [data-theme]{
   --bg:      oklch(96.5% calc(var(--c)*.12) var(--h));
   --bg-2:    oklch(92.5% calc(var(--c)*.22) var(--h));
   --ink:     oklch(23% calc(var(--c)*.35) var(--h));
@@ -26,16 +39,9 @@
   --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='a'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .32 0'/></filter><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.012 .32' numOctaves='2' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .7 -.42'/></filter><rect width='100%' height='100%' filter='url(%23a)'/><rect width='100%' height='100%' filter='url(%23b)'/></svg>");
   --grain-o: .4;
 
-  --f-display: "Hahmlet", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
-  --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
-
-  --pun-1:4px; --pun-2:8px; --pun-3:12px; --pun-4:16px; --pun-6:24px; --pun-8:32px; --pun-12:48px; --pun-16:64px;
-  --r-1:6px; --r-2:12px; --r-3:20px; --r-4:28px; --r-pill:999px;
-  --ease-bleed: cubic-bezier(.2,.7,.2,1);
-  --t-1:120ms; --t-2:220ms; --t-3:420ms;
+  color-scheme: light;
 }
-@media (prefers-color-scheme: dark){ :root[data-theme="system"]{
+@media (prefers-color-scheme: dark){ :root[data-theme="system"], :root[data-theme="system"] [data-palette]:not([data-theme]):not([data-theme="light"] *){
   --bg: oklch(17% calc(var(--c)*.22) var(--h)); --bg-2: oklch(21% calc(var(--c)*.3) var(--h));
   --ink: oklch(95% calc(var(--c)*.08) var(--h)); --ink-2: oklch(79% calc(var(--c)*.15) var(--h)); --ink-3: oklch(70% calc(var(--c)*.15) var(--h));
   --line: oklch(33% calc(var(--c)*.25) var(--h)); --paper: oklch(29% calc(var(--c)*.25) var(--h));
@@ -46,7 +52,8 @@
   --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='a'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .22 0'/></filter><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.012 .32' numOctaves='2' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 -.4'/></filter><rect width='100%' height='100%' filter='url(%23a)'/><rect width='100%' height='100%' filter='url(%23b)'/></svg>");
   --grain-o: .35; color-scheme: dark;
 }}
-:root:not([data-theme="light"]):not([data-theme="system"]){
+:root:not([data-theme="light"]):not([data-theme="system"]), [data-theme="dark"],
+:root:not([data-theme="light"]):not([data-theme="system"]) [data-palette]:not([data-theme]):not([data-theme="light"] *){
   --bg: oklch(17% calc(var(--c)*.22) var(--h)); --bg-2: oklch(21% calc(var(--c)*.3) var(--h));
   --ink: oklch(95% calc(var(--c)*.08) var(--h)); --ink-2: oklch(79% calc(var(--c)*.15) var(--h)); --ink-3: oklch(70% calc(var(--c)*.15) var(--h));
   --line: oklch(33% calc(var(--c)*.25) var(--h)); --paper: oklch(29% calc(var(--c)*.25) var(--h));
@@ -57,12 +64,14 @@
   --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='a'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .22 0'/></filter><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.012 .32' numOctaves='2' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 -.4'/></filter><rect width='100%' height='100%' filter='url(%23a)'/><rect width='100%' height='100%' filter='url(%23b)'/></svg>");
   --grain-o: .35; color-scheme: dark;
 }
-:root[data-palette="meok"]    {--h:255;--c:.012;--ah:265;--ac:.14}
-:root[data-palette="jjok"]    {--h:265;--c:.14}
-:root[data-palette="cheongja"]{--h:178;--c:.075}
-:root[data-palette="songhwa"] {--h:98; --c:.12}
-:root[data-palette="yeonji"]  {--h:16; --c:.16}
-:root[data-palette="jaju"]    {--h:330;--c:.13}
+[data-palette="meok"]    {--h:255;--c:.012;--ah:265;--ac:.14}
+[data-palette="jjok"]    {--h:265;--c:.14; --ah:265;--ac:.14}
+[data-palette="cheongja"]{--h:178;--c:.075;--ah:178;--ac:.075}
+[data-palette="songhwa"] {--h:98; --c:.12; --ah:98; --ac:.12}
+[data-palette="yeonji"]  {--h:16; --c:.16; --ah:16; --ac:.16}
+[data-palette="jaju"]    {--h:330;--c:.13; --ah:330;--ac:.13}
+/* 화면 일부에 팔레트·테마를 따로 지정하면 글자색도 그 범위의 먹색을 따라가요 */
+:where([data-palette], [data-theme]):not(:root){color:var(--ink)}
 
 /* ---------- base (opt-in: add class="gy" to <body>) ---------- */
 .gy{margin:0;color:var(--ink);background:var(--bg);font:400 16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
