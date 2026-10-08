@@ -1,0 +1,61 @@
+{
+  "name": "gyeol",
+  "version": "0.1.0",
+  "description": "결 gyeol — 한지를 겹겹이 올리는 디자인 시스템. CSS, Tailwind preset, DTCG design tokens.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minjaeK111/gyeol.git"
+  },
+  "homepage": "https://github.com/minjaeK111/gyeol#readme",
+  "bugs": {
+    "url": "https://github.com/minjaeK111/gyeol/issues"
+  },
+  "type": "module",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./gyeol.css": "./gyeol.css",
+    "./css": "./gyeol.css",
+    "./tokens.json": "./tokens.json",
+    "./tailwind": "./tailwind.preset.cjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "gyeol.css",
+    "tokens.json",
+    "tailwind.preset.cjs",
+    "index.mjs",
+    "index.cjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "dtcg",
+    "css",
+    "tailwind",
+    "korean",
+    "hanji",
+    "glassmorphism"
+  ],
+  "peerDependencies": {
+    "tailwindcss": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  }
+}
