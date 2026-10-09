@@ -1079,39 +1079,39 @@ const tokens = {
         "light": {
           "bg": {
             "$type": "color",
-            "$value": "#ebf5fb"
+            "$value": "#e9f6fd"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#d8e9f4"
+            "$value": "#d3eaf8"
           },
           "ink": {
             "$type": "color",
-            "$value": "#08202c"
+            "$value": "#002030"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#41535d"
+            "$value": "#3d5360"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#59656d"
+            "$value": "#566670"
           },
           "line": {
             "$type": "color",
-            "$value": "#bccdd8"
+            "$value": "#b8cedc"
           },
           "paper": {
             "$type": "color",
-            "$value": "#f9fdff"
+            "$value": "#f8fdff"
           },
           "accent": {
             "$type": "color",
-            "$value": "#006995"
+            "$value": "#005b93"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#bfe4fb"
+            "$value": "#b6e6ff"
           },
           "on-accent": {
             "$type": "color",
@@ -1119,7 +1119,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#d1a8ff"
+            "$value": "#d5a2ff"
           },
           "ok": {
             "$type": "color",
@@ -1137,39 +1137,39 @@ const tokens = {
         "dark": {
           "bg": {
             "$type": "color",
-            "$value": "#051118"
+            "$value": "#02111b"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#071b25"
+            "$value": "#021b29"
           },
           "ink": {
             "$type": "color",
-            "$value": "#e9f0f4"
+            "$value": "#e8f0f5"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#b1bdc4"
+            "$value": "#aebdc6"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#95a0a7"
+            "$value": "#92a1aa"
           },
           "line": {
             "$type": "color",
-            "$value": "#283842"
+            "$value": "#233845"
           },
           "paper": {
             "$type": "color",
-            "$value": "#1e2e37"
+            "$value": "#192e3a"
           },
           "accent": {
             "$type": "color",
-            "$value": "#64bced"
+            "$value": "#29aeec"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#0e3a50"
+            "$value": "#003b57"
           },
           "on-accent": {
             "$type": "color",
@@ -1177,7 +1177,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#6f4797"
+            "$value": "#7340a3"
           },
           "ok": {
             "$type": "color",
@@ -1198,39 +1198,39 @@ const tokens = {
         "light": {
           "bg": {
             "$type": "color",
-            "$value": "#f5f1fc"
+            "$value": "#f5f1fe"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#e9e3f6"
+            "$value": "#e9e2fa"
           },
           "ink": {
             "$type": "color",
-            "$value": "#20182e"
+            "$value": "#211632"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#524c5e"
+            "$value": "#534b62"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#65616e"
+            "$value": "#656071"
           },
           "line": {
             "$type": "color",
-            "$value": "#cdc7da"
+            "$value": "#cdc6dd"
           },
           "paper": {
             "$type": "color",
-            "$value": "#fdfcff"
+            "$value": "#fdfbff"
           },
           "accent": {
             "$type": "color",
-            "$value": "#6b4e9a"
+            "$value": "#613897"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#e3d7fd"
+            "$value": "#e4d5ff"
           },
           "on-accent": {
             "$type": "color",
@@ -1238,7 +1238,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#ff96a9"
+            "$value": "#ff8ca5"
           },
           "ok": {
             "$type": "color",
@@ -1256,39 +1256,39 @@ const tokens = {
         "dark": {
           "bg": {
             "$type": "color",
-            "$value": "#110d19"
+            "$value": "#120c1c"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#1b1426"
+            "$value": "#1c132a"
           },
           "ink": {
             "$type": "color",
-            "$value": "#efedf4"
+            "$value": "#efedf6"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#bcb8c5"
+            "$value": "#bcb8c7"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#a09ca8"
+            "$value": "#a09cab"
           },
           "line": {
             "$type": "color",
-            "$value": "#383243"
+            "$value": "#383146"
           },
           "paper": {
             "$type": "color",
-            "$value": "#2d2838"
+            "$value": "#2e273b"
           },
           "accent": {
             "$type": "color",
-            "$value": "#bd9ff2"
+            "$value": "#b08af0"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#3b2d52"
+            "$value": "#3c2a59"
           },
           "on-accent": {
             "$type": "color",
@@ -1296,7 +1296,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#9b344c"
+            "$value": "#a52348"
           },
           "ok": {
             "$type": "color",
