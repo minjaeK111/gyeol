@@ -841,39 +841,39 @@ const tokens = {
         "light": {
           "bg": {
             "$type": "color",
-            "$value": "#faf2ec"
+            "$value": "#f8f2ef"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#f3e3d9"
+            "$value": "#efe4de"
           },
           "ink": {
             "$type": "color",
-            "$value": "#2a180c"
+            "$value": "#261a14"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#5b4c43"
+            "$value": "#584d48"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#6c615a"
+            "$value": "#69615e"
           },
           "line": {
             "$type": "color",
-            "$value": "#d6c7bd"
+            "$value": "#d3c8c3"
           },
           "paper": {
             "$type": "color",
-            "$value": "#fffcf9"
+            "$value": "#fefcfa"
           },
           "accent": {
             "$type": "color",
-            "$value": "#8b4f21"
+            "$value": "#7f553f"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#f7d7c2"
+            "$value": "#efd9ce"
           },
           "on-accent": {
             "$type": "color",
@@ -881,7 +881,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#accb73"
+            "$value": "#b8c684"
           },
           "ok": {
             "$type": "color",
@@ -899,47 +899,47 @@ const tokens = {
         "dark": {
           "bg": {
             "$type": "color",
-            "$value": "#170d06"
+            "$value": "#150e0a"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#23140a"
+            "$value": "#201610"
           },
           "ink": {
             "$type": "color",
-            "$value": "#f3ede9"
+            "$value": "#f2edeb"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#c3b8b2"
+            "$value": "#c0b9b5"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#a69c96"
+            "$value": "#a49d99"
           },
           "line": {
             "$type": "color",
-            "$value": "#403229"
+            "$value": "#3d332e"
           },
           "paper": {
             "$type": "color",
-            "$value": "#35281f"
+            "$value": "#322924"
           },
           "accent": {
             "$type": "color",
-            "$value": "#e3a072"
+            "$value": "#d4a58e"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#4b2d18"
+            "$value": "#453025"
           },
           "on-accent": {
             "$type": "color",
-            "$value": "#1c0e05"
+            "$value": "#1c0d06"
           },
           "stain": {
             "$type": "color",
-            "$value": "#4e6801"
+            "$value": "#596424"
           },
           "ok": {
             "$type": "color",
