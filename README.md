@@ -48,7 +48,16 @@ setTheme('light');
 color('meok', 'dark', 'accent'); // '#85aeff'
 ```
 
-- `data-palette`: `meok`(기본) · `jjok` · `cheongja` · `songhwa` · `yeonji` · `jaju`
+- `data-palette`: `meok`(기본) · `jjok` · `cheongja` · `songhwa` · `yeonji` · `jaju` · `chija` · `hwangto` · `oksaek` · `haneul` · `odi`
+
+  | 팔레트 | 키 | 팔레트 | 키 |
+  | --- | --- | --- | --- |
+  | 먹 | `meok` | 치자 | `chija` |
+  | 쪽빛 | `jjok` | 황토 | `hwangto` |
+  | 청자 | `cheongja` | 옥색 | `oksaek` |
+  | 송화 | `songhwa` | 하늘 | `haneul` |
+  | 연지 | `yeonji` | 오디 | `odi` |
+  | 자주 | `jaju` | | |
 - `data-theme`: `dark`(기본) · `light` · `system`
 - 컴포넌트 클래스는 모두 `gy-` 접두사를 써서 기존 CSS와 겹치지 않아요.
 - 화면 일부만 다른 팔레트나 테마로 바꿀 수 있어요(0.1.2부터). 그 범위 안의 색과 글자색이 모두 다시 계산돼요.

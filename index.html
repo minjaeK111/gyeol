@@ -76,6 +76,11 @@
 [data-palette="songhwa"] {--h:98; --c:.12; --ah:98; --ac:.12}
 [data-palette="yeonji"]  {--h:16; --c:.16; --ah:16; --ac:.16}
 [data-palette="jaju"]    {--h:330;--c:.13; --ah:330;--ac:.13}
+[data-palette="chija"]    {--h:70;--c:0.14;--ah:70;--ac:0.14}
+[data-palette="hwangto"]  {--h:55;--c:0.1;--ah:55;--ac:0.1}
+[data-palette="oksaek"]   {--h:195;--c:0.08;--ah:195;--ac:0.08}
+[data-palette="haneul"]   {--h:235;--c:0.11;--ah:235;--ac:0.11}
+[data-palette="odi"]      {--h:300;--c:0.12;--ah:300;--ac:0.12}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -444,7 +449,7 @@ footer a{color:var(--ink-2)}
       <div>
         <h1>결<span>gyeol</span></h1>
         <p class="byline">종이를 겹쳐 만든 화면 · made by <b>minjaeK111</b></p>
-        <p class="lede">웹과 앱에 쓰는 디자인 시스템이에요. 한 장의 바탕 위에 <b>한지를 겹겹이 올리듯</b> 화면을 쌓고, 색은 먹·쪽빛·청자·송화 같은 우리 전통색에서 가져왔어요. 면은 유리처럼 비치지 않고 종이처럼 은은하게 번져요.</p>
+        <p class="lede">웹과 앱에 쓰는 디자인 시스템이에요. 한 장의 바탕 위에 <b>한지를 겹겹이 올리듯</b> 화면을 쌓고, 색은 먹·쪽빛·청자·치자·오디 같은 우리 전통색 열한 가지에서 가져왔어요. 면은 유리처럼 비치지 않고 종이처럼 은은하게 번져요.</p>
         <p class="en">A design system for web and apps. Screens are built by stacking sheets of hanji on a single ground, with palettes drawn from traditional Korean dyes.</p>
         <div class="cta">
           <a class="btn lg" href="#start">시작하기</a>
@@ -470,6 +475,11 @@ footer a{color:var(--ink-2)}
         <button class="pal" type="button" data-p="songhwa" style="--sw:oklch(62% .12 98)"><i></i>송화 <small>pine pollen</small></button>
         <button class="pal" type="button" data-p="yeonji" style="--sw:oklch(55% .16 16)"><i></i>연지 <small>rouge</small></button>
         <button class="pal" type="button" data-p="jaju" style="--sw:oklch(50% .13 330)"><i></i>자주 <small>plum</small></button>
+        <button class="pal" type="button" data-p="chija" style="--sw:oklch(55% 0.14 70)"><i></i>치자 <small>gardenia</small></button>
+        <button class="pal" type="button" data-p="hwangto" style="--sw:oklch(55% 0.1 55)"><i></i>황토 <small>ochre</small></button>
+        <button class="pal" type="button" data-p="oksaek" style="--sw:oklch(55% 0.08 195)"><i></i>옥색 <small>jade</small></button>
+        <button class="pal" type="button" data-p="haneul" style="--sw:oklch(55% 0.11 235)"><i></i>하늘 <small>sky</small></button>
+        <button class="pal" type="button" data-p="odi" style="--sw:oklch(55% 0.12 300)"><i></i>오디 <small>mulberry</small></button>
       </div>
       <div class="seg" role="group" aria-label="테마" id="themeSeg"><button type="button" data-m="dark" aria-pressed="true">다크</button><button type="button" data-m="light" aria-pressed="false">라이트</button><button type="button" data-m="system" aria-pressed="false">시스템</button></div>
     </div>
@@ -487,7 +497,7 @@ footer a{color:var(--ink-2)}
 <span class="k">import</span> 'gyeol/gyeol.css';
 <span class="k">import</span> { setPalette, setTheme, color } <span class="k">from</span> 'gyeol';
 
-setPalette('cheongja');   <span class="cm">// 먹 · 쪽빛 · 청자 · 송화 · 연지 · 자주</span>
+setPalette('cheongja');   <span class="cm">// 먹 · 쪽빛 · 청자 · 송화 · 연지 · 자주 · 치자 · 황토 · 옥색 · 하늘 · 오디</span>
 setTheme('light');        <span class="cm">// dark · light · system</span>
 
 <span class="cm">&lt;!-- HTML --&gt;</span>
@@ -571,7 +581,7 @@ setTheme('light');        <span class="cm">// dark · light · system</span>
         </article>
 
         <article class="ex gyeop du" id="ex-palettes">
-          <div class="ex-bar"><div><b>팔레트 6종 × 라이트·다크</b><small>같은 컴포넌트, 열두 가지 색</small></div><button class="btn paper sm ex-open" type="button" aria-expanded="false">열기</button></div>
+          <div class="ex-bar"><div><b>팔레트 11종 × 라이트·다크</b><small>같은 컴포넌트, 스물두 가지 색</small></div><button class="btn paper sm ex-open" type="button" aria-expanded="false">열기</button></div>
           <div class="ex-view"><div class="pmatrix" id="pmatrix"></div></div>
         </article>
       </div>
@@ -765,7 +775,7 @@ setTheme('light');        <span class="cm">// dark · light · system</span>
   function store(k,v){try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){return null}}
 
   // palette matrix (example 4)
-  var P=[['meok','먹'],['jjok','쪽빛'],['cheongja','청자'],['songhwa','송화'],['yeonji','연지'],['jaju','자주']];
+  var P=[['meok','먹'],['jjok','쪽빛'],['cheongja','청자'],['songhwa','송화'],['yeonji','연지'],['jaju','자주'],['chija','치자'],['hwangto','황토'],['oksaek','옥색'],['haneul','하늘'],['odi','오디']];
   var pm=document.getElementById('pmatrix');
   P.forEach(function(p){['light','dark'].forEach(function(t){
     var d=document.createElement('div');d.className='ptile';d.setAttribute('data-palette',p[0]);d.setAttribute('data-theme',t);

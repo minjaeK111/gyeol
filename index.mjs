@@ -716,6 +716,601 @@ const tokens = {
             "$value": "#f97770"
           }
         }
+      },
+      "chija": {
+        "$description": "치자",
+        "light": {
+          "bg": {
+            "$type": "color",
+            "$value": "#fbf2e8"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#f4e3d1"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#2b1800"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#5c4d3b"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#6d6154"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#d8c8b5"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#fffcf7"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#914d00"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#fad7b1"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#fcfcfc"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#84d672"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#137738"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#a15b00"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#be222a"
+          }
+        },
+        "dark": {
+          "bg": {
+            "$type": "color",
+            "$value": "#180d02"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#241402"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#f3ede7"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#c4b9ac"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#a79c91"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#413221"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#372818"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#e9a03e"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#4e2d00"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#1a0f03"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#1e7100"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#62c37a"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#eeb154"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#f97770"
+          }
+        }
+      },
+      "hwangto": {
+        "$description": "황토",
+        "light": {
+          "bg": {
+            "$type": "color",
+            "$value": "#faf2ec"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#f3e3d9"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#2a180c"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#5b4c43"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#6c615a"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#d6c7bd"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#fffcf9"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#8b4f21"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#f7d7c2"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#fcfcfc"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#accb73"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#137738"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#a15b00"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#be222a"
+          }
+        },
+        "dark": {
+          "bg": {
+            "$type": "color",
+            "$value": "#170d06"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#23140a"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#f3ede9"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#c3b8b2"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#a69c96"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#403229"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#35281f"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#e3a072"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#4b2d18"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#1c0e05"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#4e6801"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#62c37a"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#eeb154"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#f97770"
+          }
+        }
+      },
+      "oksaek": {
+        "$description": "옥색",
+        "light": {
+          "bg": {
+            "$type": "color",
+            "$value": "#edf6f5"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#daeaea"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#0b2121"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#435353"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#5a6666"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#becece"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#f9fdfd"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#0f6e6e"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#c4e6e5"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#fcfcfc"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#9ebdff"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#137738"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#a15b00"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#be222a"
+          }
+        },
+        "dark": {
+          "bg": {
+            "$type": "color",
+            "$value": "#061212"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#0a1c1c"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#eaf0f0"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#b2bdbd"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#96a1a1"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#293938"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#202f2e"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#70c1c1"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#153c3c"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#001616"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#415b97"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#62c37a"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#eeb154"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#f97770"
+          }
+        }
+      },
+      "haneul": {
+        "$description": "하늘",
+        "light": {
+          "bg": {
+            "$type": "color",
+            "$value": "#ebf5fb"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#d8e9f4"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#08202c"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#41535d"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#59656d"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#bccdd8"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#f9fdff"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#006995"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#bfe4fb"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#fcfcfc"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#d1a8ff"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#137738"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#a15b00"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#be222a"
+          }
+        },
+        "dark": {
+          "bg": {
+            "$type": "color",
+            "$value": "#051118"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#071b25"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#e9f0f4"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#b1bdc4"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#95a0a7"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#283842"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#1e2e37"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#64bced"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#0e3a50"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#04141d"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#6f4797"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#62c37a"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#eeb154"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#f97770"
+          }
+        }
+      },
+      "odi": {
+        "$description": "오디",
+        "light": {
+          "bg": {
+            "$type": "color",
+            "$value": "#f5f1fc"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#e9e3f6"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#20182e"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#524c5e"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#65616e"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#cdc7da"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#fdfcff"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#6b4e9a"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#e3d7fd"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#fcfcfc"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#ff96a9"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#137738"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#a15b00"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#be222a"
+          }
+        },
+        "dark": {
+          "bg": {
+            "$type": "color",
+            "$value": "#110d19"
+          },
+          "bg-2": {
+            "$type": "color",
+            "$value": "#1b1426"
+          },
+          "ink": {
+            "$type": "color",
+            "$value": "#efedf4"
+          },
+          "ink-2": {
+            "$type": "color",
+            "$value": "#bcb8c5"
+          },
+          "ink-3": {
+            "$type": "color",
+            "$value": "#a09ca8"
+          },
+          "line": {
+            "$type": "color",
+            "$value": "#383243"
+          },
+          "paper": {
+            "$type": "color",
+            "$value": "#2d2838"
+          },
+          "accent": {
+            "$type": "color",
+            "$value": "#bd9ff2"
+          },
+          "accent-soft": {
+            "$type": "color",
+            "$value": "#3b2d52"
+          },
+          "on-accent": {
+            "$type": "color",
+            "$value": "#140e1d"
+          },
+          "stain": {
+            "$type": "color",
+            "$value": "#9b344c"
+          },
+          "ok": {
+            "$type": "color",
+            "$value": "#62c37a"
+          },
+          "warn": {
+            "$type": "color",
+            "$value": "#eeb154"
+          },
+          "err": {
+            "$type": "color",
+            "$value": "#f97770"
+          }
+        }
       }
     },
     "font": {
@@ -920,7 +1515,7 @@ const tokens = {
   }
 };
 
-export const palettes = ["meok", "jjok", "cheongja", "songhwa", "yeonji", "jaju"];
+export const palettes = ["meok", "jjok", "cheongja", "songhwa", "yeonji", "jaju", "chija", "hwangto", "oksaek", "haneul", "odi"];
 export const themes = ["dark", "light", "system"];
 
 /** <html data-palette> 값을 바꿔요. */

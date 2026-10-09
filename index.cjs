@@ -1,7 +1,7 @@
 // 결 gyeol — CommonJS entry
 const tokens = require("./tokens.json");
 
-const palettes = ["meok", "jjok", "cheongja", "songhwa", "yeonji", "jaju"];
+const palettes = ["meok", "jjok", "cheongja", "songhwa", "yeonji", "jaju", "chija", "hwangto", "oksaek", "haneul", "odi"];
 const themes = ["dark", "light", "system"];
 
 /** <html data-palette> 값을 바꿔요. */
