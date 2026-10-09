@@ -271,8 +271,9 @@ section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px}
 /* 홑겹은 비침이 커서 설명 글자 뒤에만 종이 띠를 한 장 더 깐다 */
 .hol .spec,.sheet.hol small{background:color-mix(in oklch, var(--paper) 82%, transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:6px 9px;border-radius:var(--r-1);color:var(--ink-2);align-self:flex-start}
 .sheet.hol small{display:inline-block}
+@media (max-width:560px){.sheet.hol small{display:none}}
 .material.round{border-radius:var(--r-4)}
-@media (max-width:640px){.material{grid-template-columns:1fr;align-content:start;padding:24px 18px;gap:12px}.material .gyeop{min-height:0;gap:10px;padding:16px}.material::before{font-size:220px;top:46%}}
+@media (max-width:640px){.material{grid-template-columns:1fr;align-content:start;height:auto;min-height:100%;padding:24px 18px;gap:12px}.material .gyeop{min-height:0;gap:10px;padding:16px}.material::before{font-size:220px;top:46%}}
 
 /* palette matrix */
 .pmatrix{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);height:100%}
