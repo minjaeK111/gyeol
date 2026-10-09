@@ -216,7 +216,7 @@ section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px}
 .ex-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px 12px 20px;border-bottom:1px solid var(--line)}
 .ex-bar b{font:700 16px var(--f-display)}
 .ex-bar small{display:block;font-size:13px;color:var(--ink-3);margin-top:2px}
-.ex-view{position:relative;height:380px;overflow:hidden;background:var(--bg)}
+.ex-view{position:relative;height:380px;overflow:hidden;background:var(--bg);container-type:inline-size}
 .ex-view::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(transparent, var(--bg));pointer-events:none}
 .ex.full .ex-view{height:auto;overflow:visible}
 .ex.full .ex-view::after{display:none}
@@ -275,6 +275,8 @@ section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px}
 .material.round{border-radius:var(--r-4)}
 @media (max-width:640px){.material{grid-template-columns:1fr;align-content:start;height:auto;min-height:100%;padding:24px 18px;gap:12px}.material .gyeop{min-height:0;gap:10px;padding:16px}.material::before{font-size:220px;top:46%}}
 
+/* 예시 카드가 좁을 때(데스크톱 반쪽 폭 포함)는 겹 카드를 한 줄에 하나씩 */
+@container (max-width:600px){.material{grid-template-columns:1fr;align-content:start;height:auto;min-height:100%;padding:24px 18px;gap:12px}.material .gyeop{min-height:0;gap:10px;padding:16px}.material::before{font-size:220px;top:46%}}
 /* palette matrix */
 .pmatrix{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);height:100%}
 .ptile{padding:14px 16px;display:flex;align-items:center;gap:12px;background:var(--bg);color:var(--ink);min-width:0}
