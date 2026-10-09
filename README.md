@@ -17,7 +17,7 @@ npm install gyeol
 ## 1. 웹 (CSS)
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gyeol@0.1.6/gyeol.css">
 <!-- 또는 unpkg: <link rel="stylesheet" href="https://unpkg.com/gyeol@0.1.6/gyeol.css"> -->
 
@@ -85,6 +85,19 @@ setPalette('jaju', document.querySelector('#promo')); // 특정 요소에만 적
 | 배지 | `gy-badge` + `--ok` / `--warn` / `--err` |
 | 진행 막대 | `<div class="gy-progress" style="--p:60%"><i></i></div>` |
 | 토스트·툴팁 | `gy-toast`(겹과 함께), `gy-tooltip` |
+
+**접근성 메모**
+
+- 터치 화면에서는 작은 버튼, 칩, 세그먼트, 체크박스가 40px 이상으로 커지고 스위치는 누르는 범위가 넓어져요(0.1.7부터).
+- 토스트는 화면 낭독기가 읽을 수 있게 늘 존재하는 알림 영역 안에 넣어 주세요.
+
+```html
+<div role="status" aria-live="polite">
+  <div class="gy-toast gy-gyeop gy-se" hidden>저장했어요</div>
+</div>
+```
+
+- 다이얼로그를 띄울 때는 뒤쪽 내용에 `inert`를 걸고, 닫으면 다이얼로그를 연 버튼으로 포커스를 돌려주세요.
 
 ## 2. Tailwind
 

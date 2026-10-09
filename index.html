@@ -15,7 +15,7 @@
 <title>결 gyeol</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: 소개 → 팔레트 → 시작하기 → 예시 화면 → 반응형 규칙 → 브랜드북(목록 → 상세). 한 장의 바탕 위에 한지를 겹겹이 올린다 */
 :root{
@@ -124,7 +124,7 @@ code,.mono{font-family:var(--f-mono)}
 .top nav{display:flex;gap:4px;margin-left:auto}
 .top nav a{font-size:14px;color:var(--ink-2);text-decoration:none;padding:6px 12px;border-radius:var(--r-pill)}
 .top nav a:hover{background:color-mix(in oklch, var(--accent) 12%, transparent);color:var(--ink)}
-@media (max-width:760px){.top nav{display:none}.top .btn-theme{margin-left:auto}}
+@media (max-width:760px){.top{flex-wrap:wrap;border-radius:var(--r-3);row-gap:6px}.top .btn-theme{margin-left:auto}.top nav{order:3;width:100%;margin-left:0;justify-content:space-between;overflow-x:auto;border-top:1px solid color-mix(in oklch, var(--line) 70%, transparent);padding-top:6px}.top nav a{white-space:nowrap}[id]{scroll-margin-top:140px}}
 
 /* buttons */
 .btn{--bg-b:var(--accent);--fg-b:var(--on-accent);appearance:none;border:0;cursor:pointer;font:600 15px/1 var(--f-body);color:var(--fg-b);background:var(--bg-b);padding:13px 20px;border-radius:var(--r-2);display:inline-flex;align-items:center;gap:8px;position:relative;text-decoration:none;transition:transform var(--t-1) var(--ease-bleed), box-shadow var(--t-3) var(--ease-bleed)}
@@ -168,6 +168,7 @@ code,.mono{font-family:var(--f-mono)}
 .stage:hover .s1{transform:rotate(-8deg) translate(-8px,-6px)}
 .stage:hover .s3{transform:rotate(1deg) translate(8px,6px)}
 @media (max-width:860px){.hero{grid-template-columns:1fr;padding-block:44px 16px;gap:28px}.stage{max-width:440px;margin-inline:auto}}
+@media (max-width:560px){.sheet small{display:none}.sheet{padding:14px}}
 
 /* palette picker */
 .picker{padding:20px;border-radius:var(--r-4);display:flex;flex-direction:column;gap:16px}
@@ -268,7 +269,7 @@ section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px}
 .spec{font:400 12.5px/1.7 var(--f-mono);color:var(--ink-2)}
 .spec b{color:var(--ink);font-weight:500}
 .material.round{border-radius:var(--r-4)}
-@media (max-width:640px){.material{grid-template-columns:1fr}}
+@media (max-width:640px){.material{grid-template-columns:1fr;align-content:start;padding:24px 18px;gap:12px}.material .gyeop{min-height:0;gap:10px;padding:16px}.material::before{font-size:220px;top:46%}}
 
 /* palette matrix */
 .pmatrix{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);height:100%}
@@ -431,6 +432,15 @@ footer a{color:var(--ink-2)}
 .modal p{color:var(--ink-2);font-size:15px}
 .modal .act{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
 
+/* 터치 화면: 누르는 곳은 40px 이상 */
+@media (pointer:coarse){
+  .btn.sm,.chip-t,.seg button,.tabs button,.pal,.top nav a,.irow a,footer a{min-height:40px;display:inline-flex;align-items:center}
+  .bb-i a{min-height:40px;display:inline-flex;align-items:center;padding-inline:14px}
+  .iconbtn{width:44px;height:44px}
+  .check{min-height:40px}
+  .switch::before{content:"";position:absolute;inset:-6px -4px}
+  .ex-open{min-height:40px}
+}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -600,7 +610,7 @@ setTheme('light');        <span class="cm">// dark · light · system</span>
         </table>
       </div>
       <div class="rnotes">
-        <div class="rnote gyeop du"><b>누르는 곳은 40px 이상</b><span>버튼, 스위치, 아이콘 버튼 모두 손가락으로 누르기 쉬운 크기를 지켜요.</span></div>
+        <div class="rnote gyeop du"><b>누르는 곳은 40px 이상</b><span>터치 화면에서는 버튼, 칩, 스위치, 링크 모두 손가락으로 누르기 쉬운 40px 이상으로 커져요.</span></div>
         <div class="rnote gyeop du"><b>본문은 16px 고정</b><span>화면이 작아져도 본문 글자는 줄이지 않고 줄 길이만 짧아져요.</span></div>
         <div class="rnote gyeop du"><b>겹은 화면당 세 단계</b><span>작은 화면에서도 홑겹·두겹·세겹 외의 두께를 새로 만들지 않아요.</span></div>
       </div>
@@ -764,7 +774,7 @@ setTheme('light');        <span class="cm">// dark · light · system</span>
   </footer>
 </div>
 
-<div id="toast-live" hidden><div class="toast gyeop se"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 8.5l3 3 7-7"/></svg></span><span id="toastMsg">저장했어요</span></div></div>
+<div id="toast-live" role="status" aria-live="polite"><div class="toast gyeop se" hidden><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 8.5l3 3 7-7"/></svg></span><span id="toastMsg">저장했어요</span></div></div>
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
   <div class="gyeop se"><h4 id="mTitle">정말 삭제할까요?</h4><p>이 화면은 미리보기라 실제로 지워지는 건 없어요.</p><div class="act"><button class="btn paper sm" type="button" data-close>닫기</button><button class="btn danger sm" type="button" data-close>삭제</button></div></div>
 </div>
@@ -807,14 +817,21 @@ setTheme('light');        <span class="cm">// dark · light · system</span>
     if(on) ex.scrollIntoView({block:'start'});
   })});
 
-  var tl=document.getElementById('toast-live'),tm=document.getElementById('toastMsg'),tt;
-  function toast(msg){tm.textContent=msg;tl.hidden=false;clearTimeout(tt);tt=setTimeout(function(){tl.hidden=true},2200)}
+  var tl=document.querySelector('#toast-live .toast'),tm=document.getElementById('toastMsg'),tt;
+  function toast(msg){tl.hidden=false;tm.textContent='';setTimeout(function(){tm.textContent=msg},30);clearTimeout(tt);tt=setTimeout(function(){tl.hidden=true},2600)}
   document.getElementById('showToast').addEventListener('click',function(){toast('저장했어요')});
 
-  var modal=document.getElementById('modal');
-  document.getElementById('openDlg').addEventListener('click',function(){modal.hidden=false;modal.querySelector('[data-close]').focus()});
-  modal.addEventListener('click',function(e){if(e.target===modal||e.target.hasAttribute('data-close'))modal.hidden=true});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')modal.hidden=true});
+  var modal=document.getElementById('modal'),wrap=document.querySelector('.wrap'),lastFocus=null;
+  function openModal(){lastFocus=document.activeElement;modal.hidden=false;wrap.inert=true;modal.querySelector('[data-close]').focus()}
+  function closeModal(){if(modal.hidden)return;modal.hidden=true;wrap.inert=false;if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+  document.getElementById('openDlg').addEventListener('click',openModal);
+  modal.addEventListener('click',function(e){if(e.target===modal||e.target.hasAttribute('data-close'))closeModal()});
+  document.addEventListener('keydown',function(e){
+    if(modal.hidden)return;
+    if(e.key==='Escape'){closeModal();return}
+    if(e.key==='Tab'){var f=modal.querySelectorAll('button,[href],input');var a=f[0],z=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
+  });
 
   function copy(btn,el){
     var txt=el.textContent;

@@ -6,7 +6,7 @@
  *   data-theme:   dark | light | system                              (기본 dark)
  * 화면 일부만 다른 팔레트·테마로: <section data-palette="yeonji" data-theme="light"> (0.1.2+)
  * 모든 컴포넌트 클래스는 gy- 접두사를 써서 다른 CSS와 충돌하지 않아요.
- * 글꼴: https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap
+ * 글꼴: https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap
  */
 
 /* ---------- tokens ---------- */
@@ -147,5 +147,12 @@
 /* ---------- toast / tooltip ---------- */
 .gy-toast{display:flex;align-items:center;gap:12px;padding:12px 16px;font-size:14.5px}
 .gy-tooltip{font-size:13px;padding:7px 11px;border-radius:10px;background:var(--ink);color:var(--bg)}
+
+/* ---------- 터치 화면: 누르는 곳은 40px 이상 (0.1.7+) ---------- */
+@media (pointer:coarse){
+  .gy-btn--sm,.gy-chip,.gy-seg button{min-height:40px}
+  .gy-check{min-height:40px}
+  .gy-switch::before{content:"";position:absolute;inset:-6px -4px}
+}
 
 @media (prefers-reduced-motion: reduce){.gy *,.gy *::before,.gy *::after{transition:none!important;animation:none!important}}
