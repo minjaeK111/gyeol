@@ -18,8 +18,8 @@ npm install gyeol
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gyeol@0.1.2/gyeol.css">
-<!-- 또는 unpkg: <link rel="stylesheet" href="https://unpkg.com/gyeol@0.1.2/gyeol.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gyeol@0.1.3/gyeol.css">
+<!-- 또는 unpkg: <link rel="stylesheet" href="https://unpkg.com/gyeol@0.1.3/gyeol.css"> -->
 
 <html data-palette="meok" data-theme="dark">
 <body class="gy">
@@ -34,8 +34,8 @@ CDN은 jsDelivr와 unpkg 중 하나를 쓰면 돼요. 버전을 빼고 `gyeol/gy
 
 | CDN | 주소 |
 | --- | --- |
-| jsDelivr | `https://cdn.jsdelivr.net/npm/gyeol@0.1.2/gyeol.css` |
-| unpkg | `https://unpkg.com/gyeol@0.1.2/gyeol.css` |
+| jsDelivr | `https://cdn.jsdelivr.net/npm/gyeol@0.1.3/gyeol.css` |
+| unpkg | `https://unpkg.com/gyeol@0.1.3/gyeol.css` |
 
 번들러(Vite, Next.js 등)를 쓰면 CSS를 이렇게 불러와요.
 
