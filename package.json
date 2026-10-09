@@ -1,6 +1,6 @@
 {
   "name": "gyeol",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "결 gyeol — 한지를 겹겹이 올리는 디자인 시스템. CSS, Tailwind preset, DTCG design tokens.",
   "license": "MIT",
   "repository": {
