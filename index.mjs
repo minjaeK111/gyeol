@@ -254,11 +254,11 @@ const tokens = {
           },
           "ink": {
             "$type": "color",
-            "$value": "#0e211d"
+            "$value": "#0d211d"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#455350"
+            "$value": "#445450"
           },
           "ink-3": {
             "$type": "color",
@@ -266,7 +266,7 @@ const tokens = {
           },
           "line": {
             "$type": "color",
-            "$value": "#c0ceca"
+            "$value": "#bfceca"
           },
           "paper": {
             "$type": "color",
@@ -274,11 +274,11 @@ const tokens = {
           },
           "accent": {
             "$type": "color",
-            "$value": "#256e60"
+            "$value": "#2c7b6c"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#c7e6de"
+            "$value": "#c6e6de"
           },
           "on-accent": {
             "$type": "color",
@@ -286,7 +286,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#8bc4fa"
+            "$value": "#88c4fd"
           },
           "ok": {
             "$type": "color",
@@ -308,7 +308,7 @@ const tokens = {
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#0c1c18"
+            "$value": "#0b1c18"
           },
           "ink": {
             "$type": "color",
@@ -324,7 +324,7 @@ const tokens = {
           },
           "line": {
             "$type": "color",
-            "$value": "#2b3935"
+            "$value": "#2a3935"
           },
           "paper": {
             "$type": "color",
@@ -332,11 +332,11 @@ const tokens = {
           },
           "accent": {
             "$type": "color",
-            "$value": "#7bc1b1"
+            "$value": "#83cfbe"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#1b3c35"
+            "$value": "#193d35"
           },
           "on-accent": {
             "$type": "color",
@@ -344,7 +344,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#2a6192"
+            "$value": "#276194"
           },
           "ok": {
             "$type": "color",
@@ -960,39 +960,39 @@ const tokens = {
         "light": {
           "bg": {
             "$type": "color",
-            "$value": "#edf6f5"
+            "$value": "#ebf6f6"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#daeaea"
+            "$value": "#d6ebeb"
           },
           "ink": {
             "$type": "color",
-            "$value": "#0b2121"
+            "$value": "#042222"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#435353"
+            "$value": "#405454"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#5a6666"
+            "$value": "#586766"
           },
           "line": {
             "$type": "color",
-            "$value": "#becece"
+            "$value": "#bbcfcf"
           },
           "paper": {
             "$type": "color",
-            "$value": "#f9fdfd"
+            "$value": "#f9fefd"
           },
           "accent": {
             "$type": "color",
-            "$value": "#0f6e6e"
+            "$value": "#006364"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#c4e6e5"
+            "$value": "#bce8e7"
           },
           "on-accent": {
             "$type": "color",
@@ -1000,7 +1000,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#9ebdff"
+            "$value": "#98bcff"
           },
           "ok": {
             "$type": "color",
@@ -1018,39 +1018,39 @@ const tokens = {
         "dark": {
           "bg": {
             "$type": "color",
-            "$value": "#061212"
+            "$value": "#041212"
           },
           "bg-2": {
             "$type": "color",
-            "$value": "#0a1c1c"
+            "$value": "#051d1d"
           },
           "ink": {
             "$type": "color",
-            "$value": "#eaf0f0"
+            "$value": "#e9f0f0"
           },
           "ink-2": {
             "$type": "color",
-            "$value": "#b2bdbd"
+            "$value": "#b0bebd"
           },
           "ink-3": {
             "$type": "color",
-            "$value": "#96a1a1"
+            "$value": "#94a1a1"
           },
           "line": {
             "$type": "color",
-            "$value": "#293938"
+            "$value": "#263a39"
           },
           "paper": {
             "$type": "color",
-            "$value": "#202f2e"
+            "$value": "#1c2f2f"
           },
           "accent": {
             "$type": "color",
-            "$value": "#70c1c1"
+            "$value": "#45b5b5"
           },
           "accent-soft": {
             "$type": "color",
-            "$value": "#153c3c"
+            "$value": "#033e3e"
           },
           "on-accent": {
             "$type": "color",
@@ -1058,7 +1058,7 @@ const tokens = {
           },
           "stain": {
             "$type": "color",
-            "$value": "#415b97"
+            "$value": "#3c5aa1"
           },
           "ok": {
             "$type": "color",

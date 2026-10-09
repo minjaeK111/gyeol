@@ -11,7 +11,7 @@
 
 /* ---------- tokens ---------- */
 :root{
-  --h:255; --c:.012; --ah:265; --ac:.14;   /* 기본 팔레트: 먹 + 쪽빛 강조 */
+  --h:255; --c:.012; --ah:265; --ac:.14; --ad:0%;   /* 기본 팔레트: 먹 + 쪽빛 강조 */
   --f-display: "Hahmlet", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
   --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
@@ -31,7 +31,7 @@
   --ink-3:   oklch(50% calc(var(--c)*.18) var(--h));
   --line:    oklch(84% calc(var(--c)*.22) var(--h));
   --paper:   oklch(99.2% calc(var(--c)*.05) var(--h));
-  --accent:  oklch(49% var(--ac) var(--ah));
+  --accent:  oklch(calc(49% + var(--ad)) var(--ac) var(--ah));
   --accent-soft: oklch(90% calc(var(--ac)*.45) var(--ah));
   --on-accent: oklch(99% 0 0);
   --stain:   oklch(80% calc(var(--c)*.9 + .03) calc(var(--h) + 70));
@@ -46,7 +46,7 @@
   --bg: oklch(17% calc(var(--c)*.22) var(--h)); --bg-2: oklch(21% calc(var(--c)*.3) var(--h));
   --ink: oklch(95% calc(var(--c)*.08) var(--h)); --ink-2: oklch(79% calc(var(--c)*.15) var(--h)); --ink-3: oklch(70% calc(var(--c)*.15) var(--h));
   --line: oklch(33% calc(var(--c)*.25) var(--h)); --paper: oklch(29% calc(var(--c)*.25) var(--h));
-  --accent: oklch(76% var(--ac) var(--ah)); --accent-soft: oklch(33% calc(var(--ac)*.55) var(--ah)); --on-accent: oklch(18% .03 var(--ah));
+  --accent: oklch(calc(76% + var(--ad)) var(--ac) var(--ah)); --accent-soft: oklch(33% calc(var(--ac)*.55) var(--ah)); --on-accent: oklch(18% .03 var(--ah));
   --stain: oklch(48% calc(var(--c)*.9 + .03) calc(var(--h) + 70));
   --ok: oklch(74% .14 150); --warn: oklch(80% .13 75); --err: oklch(72% .16 25);
   --shadow: 0 1px 0 oklch(100% 0 0 / .07) inset, 0 20px 44px -20px oklch(5% .02 var(--h) / .7), 0 2px 6px -2px oklch(5% 0 0 / .4);
@@ -58,24 +58,24 @@
   --bg: oklch(17% calc(var(--c)*.22) var(--h)); --bg-2: oklch(21% calc(var(--c)*.3) var(--h));
   --ink: oklch(95% calc(var(--c)*.08) var(--h)); --ink-2: oklch(79% calc(var(--c)*.15) var(--h)); --ink-3: oklch(70% calc(var(--c)*.15) var(--h));
   --line: oklch(33% calc(var(--c)*.25) var(--h)); --paper: oklch(29% calc(var(--c)*.25) var(--h));
-  --accent: oklch(76% var(--ac) var(--ah)); --accent-soft: oklch(33% calc(var(--ac)*.55) var(--ah)); --on-accent: oklch(18% .03 var(--ah));
+  --accent: oklch(calc(76% + var(--ad)) var(--ac) var(--ah)); --accent-soft: oklch(33% calc(var(--ac)*.55) var(--ah)); --on-accent: oklch(18% .03 var(--ah));
   --stain: oklch(48% calc(var(--c)*.9 + .03) calc(var(--h) + 70));
   --ok: oklch(74% .14 150); --warn: oklch(80% .13 75); --err: oklch(72% .16 25);
   --shadow: 0 1px 0 oklch(100% 0 0 / .07) inset, 0 20px 44px -20px oklch(5% .02 var(--h) / .7), 0 2px 6px -2px oklch(5% 0 0 / .4);
   --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='a'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .22 0'/></filter><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.012 .32' numOctaves='2' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 -.4'/></filter><rect width='100%' height='100%' filter='url(%23a)'/><rect width='100%' height='100%' filter='url(%23b)'/></svg>");
   --grain-o: .35; color-scheme: dark;
 }
-[data-palette="meok"]    {--h:255;--c:.012;--ah:265;--ac:.14}
-[data-palette="jjok"]    {--h:265;--c:.14; --ah:265;--ac:.14}
-[data-palette="cheongja"]{--h:178;--c:.075;--ah:178;--ac:.075}
-[data-palette="songhwa"] {--h:98; --c:.12; --ah:98; --ac:.12}
-[data-palette="yeonji"]  {--h:16; --c:.16; --ah:16; --ac:.16}
-[data-palette="jaju"]    {--h:330;--c:.13; --ah:330;--ac:.13}
-[data-palette="chija"]    {--h:70;--c:0.14;--ah:70;--ac:0.14}
-[data-palette="hwangto"]  {--h:48;--c:.065;--ah:48;--ac:.065}
-[data-palette="oksaek"]   {--h:195;--c:0.08;--ah:195;--ac:0.08}
-[data-palette="haneul"]   {--h:235;--c:0.11;--ah:235;--ac:0.11}
-[data-palette="odi"]      {--h:300;--c:0.12;--ah:300;--ac:0.12}
+[data-palette="meok"]    {--h:255;--c:.012;--ah:265;--ac:.14;--ad:0%}
+[data-palette="jjok"]    {--h:265;--c:.14; --ah:265;--ac:.14;--ad:0%}
+[data-palette="cheongja"]{--h:178;--c:.08;--ah:178;--ac:.08;--ad:4%}
+[data-palette="songhwa"] {--h:98; --c:.12; --ah:98; --ac:.12;--ad:0%}
+[data-palette="yeonji"]  {--h:16; --c:.16; --ah:16; --ac:.16;--ad:0%}
+[data-palette="jaju"]    {--h:330;--c:.13; --ah:330;--ac:.13;--ad:0%}
+[data-palette="chija"]    {--h:70;--c:0.14;--ah:70;--ac:0.14;--ad:0%}
+[data-palette="hwangto"]  {--h:48;--c:.065;--ah:48;--ac:.065;--ad:0%}
+[data-palette="oksaek"]   {--h:195;--c:.10;--ah:195;--ac:.10;--ad:-5%}
+[data-palette="haneul"]   {--h:235;--c:0.11;--ah:235;--ac:0.11;--ad:0%}
+[data-palette="odi"]      {--h:300;--c:0.12;--ah:300;--ac:0.12;--ad:0%}
 /* 화면 일부에 팔레트·테마를 따로 지정하면 글자색도 그 범위의 먹색을 따라가요 */
 :where([data-palette], [data-theme]):not(:root){color:var(--ink)}
 
