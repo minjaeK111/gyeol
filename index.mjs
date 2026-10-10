@@ -1519,18 +1519,24 @@ export const palettes = ["meok", "jjok", "cheongja", "songhwa", "yeonji", "jaju"
 export const themes = ["dark", "light", "system"];
 
 /** <html data-palette> 값을 바꿔요. */
-export function setPalette(palette, el = document.documentElement) {
-  el.setAttribute("data-palette", palette);
+export function setPalette(palette, el = typeof document !== "undefined" ? document.documentElement : null) {
+  if (el) el.setAttribute("data-palette", palette);
 }
 
 /** <html data-theme> 값을 바꿔요. */
-export function setTheme(theme, el = document.documentElement) {
-  el.setAttribute("data-theme", theme);
+export function setTheme(theme, el = typeof document !== "undefined" ? document.documentElement : null) {
+  if (el) el.setAttribute("data-theme", theme);
 }
 
 /** 팔레트·테마·역할로 HEX 색을 돌려줘요. 예) color("meok", "dark", "accent") */
 export function color(palette, theme, role) {
-  return tokens.gyeol.color[palette][theme][role].$value;
+  const p = tokens.gyeol.color[palette];
+  if (!p) throw new Error(`gyeol: unknown palette "${palette}". Use one of: ${palettes.join(", ")}`);
+  const t = p[theme];
+  if (!t) throw new Error(`gyeol: unknown theme "${theme}". Use "light" or "dark"`);
+  const r = t[role];
+  if (!r) throw new Error(`gyeol: unknown color role "${role}". Use one of: ${Object.keys(t).join(", ")}`);
+  return r.$value;
 }
 
 export { tokens };

@@ -15,7 +15,8 @@
 <title>결 gyeol</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <style>
 /* Layout: 소개 → 팔레트 → 시작하기 → 예시 화면 → 반응형 규칙 → 브랜드북(목록 → 상세). 한 장의 바탕 위에 한지를 겹겹이 올린다 */
 :root{
@@ -87,15 +88,15 @@
 html{scroll-behavior:smooth}
 body{
   margin:0; color:var(--ink); font:400 16px/1.65 var(--f-body);
-  background:
-    radial-gradient(60vmax 40vmax at 88% -8%, var(--accent-soft), transparent 60%),
-    radial-gradient(50vmax 36vmax at -10% 38%, color-mix(in oklch, var(--stain) 45%, transparent), transparent 62%),
-    var(--bg);
-  background-attachment: fixed;
+  background: var(--bg);
   padding-inline: 20px;
   -webkit-font-smoothing: antialiased;
 }
 .wrap{max-width:1120px;margin-inline:auto}
+/* 바탕 번짐: 고정 레이어 하나로 그려 스크롤할 때 다시 칠하지 않는다 */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(60vmax 40vmax at 88% -8%, var(--accent-soft), transparent 60%),
+  radial-gradient(50vmax 36vmax at -10% 38%, color-mix(in oklch, var(--stain) 45%, transparent), transparent 62%)}
 h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
 p{margin:0}
 code,.mono{font-family:var(--f-mono)}
@@ -106,12 +107,12 @@ code,.mono{font-family:var(--f-mono)}
 .gyeop{
   position:relative; isolation:isolate;
   background: color-mix(in oklch, var(--paper) var(--thick,74%), transparent);
-  -webkit-backdrop-filter: blur(var(--blur,14px)) saturate(1.2);
-  backdrop-filter: blur(var(--blur,14px)) saturate(1.2);
   border:1px solid color-mix(in oklch, var(--paper) 50%, var(--line));
   border-radius:var(--r-3); box-shadow:var(--shadow);
 }
 .gyeop::before{content:"";position:absolute;inset:0;border-radius:inherit;background-image:var(--grain);opacity:var(--grain-o);pointer-events:none;z-index:-1}
+/* 블러는 종이 뒤에 실제로 무언가 비칠 때만 건다 (바탕이 매끈한 곳은 블러해도 차이가 없고 비용만 든다) */
+.top,.stage .gyeop,.material .gyeop,.dlg-prev .gyeop,.screen .gyeop,.land .gyeop,.modal .gyeop,#toast-live .gyeop{-webkit-backdrop-filter:blur(var(--blur,14px)) saturate(1.2);backdrop-filter:blur(var(--blur,14px)) saturate(1.2)}
 .hol{--thick:46%;--blur:6px}
 .du {--thick:72%;--blur:14px}
 .se {--thick:90%;--blur:24px}
@@ -131,7 +132,7 @@ code,.mono{font-family:var(--f-mono)}
 .btn:hover{box-shadow:0 0 0 1px var(--bg-b), 0 6px 22px -4px color-mix(in oklch, var(--bg-b) 60%, transparent)}
 .btn:active{transform:translateY(1px) scale(.985)}
 .btn.ink{--bg-b:var(--ink);--fg-b:var(--bg)}
-.btn.paper{--fg-b:var(--ink);background:color-mix(in oklch, var(--paper) 74%, transparent);border:1px solid var(--line);backdrop-filter:blur(12px)}
+.btn.paper{--fg-b:var(--ink);background:color-mix(in oklch, var(--paper) 74%, transparent);border:1px solid var(--line)}
 .btn.paper:hover{box-shadow:0 6px 22px -8px color-mix(in oklch, var(--ink) 40%, transparent)}
 .btn.ghost{--fg-b:var(--accent);background:transparent}
 .btn.ghost:hover{background:color-mix(in oklch, var(--accent) 10%, transparent);box-shadow:none}
@@ -182,7 +183,7 @@ code,.mono{font-family:var(--f-mono)}
 .picker .seg{align-self:flex-start}
 
 /* sections */
-section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px}
+section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px;content-visibility:auto;contain-intrinsic-size:auto 1400px}
 .head h2{font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.15}
 .head h2 .en{font:300 .72em var(--f-display);color:var(--ink-3);margin-left:.3em;letter-spacing:0}
 .head p{color:var(--ink-2);max-width:42em;margin-top:10px}
@@ -272,7 +273,6 @@ section.blk{padding-block:88px 8px;display:flex;flex-direction:column;gap:28px}
 .hol .spec,.sheet.hol small{background:color-mix(in oklch, var(--paper) 82%, transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:6px 9px;border-radius:var(--r-1);color:var(--ink-2);align-self:flex-start}
 .sheet.hol small{display:inline-block}
 @media (max-width:560px){.sheet.hol small{display:none}}
-.material.round{border-radius:var(--r-4)}
 @media (max-width:640px){.material{grid-template-columns:1fr;align-content:start;height:auto;min-height:100%;padding:24px 18px;gap:12px}.material .gyeop{min-height:0;gap:10px;padding:16px}.material::before{font-size:220px;top:46%}}
 
 /* 예시 카드가 좁을 때(데스크톱 반쪽 폭 포함)는 겹 카드를 한 줄에 하나씩 */

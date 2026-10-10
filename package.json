@@ -17,9 +17,14 @@
   "types": "./index.d.ts",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.mjs",
-      "require": "./index.cjs"
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./index.cjs"
+      }
     },
     "./gyeol.css": "./gyeol.css",
     "./css": "./gyeol.css",
@@ -34,6 +39,7 @@
     "index.mjs",
     "index.cjs",
     "index.d.ts",
+    "index.d.cts",
     "README.md",
     "LICENSE"
   ],
