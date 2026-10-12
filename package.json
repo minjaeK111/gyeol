@@ -1,6 +1,6 @@
 {
   "name": "gyeol",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "결 gyeol — 한지를 겹겹이 올리는 디자인 시스템. CSS, Tailwind preset, DTCG design tokens.",
   "license": "MIT",
   "repository": {
@@ -28,12 +28,15 @@
     },
     "./gyeol.css": "./gyeol.css",
     "./css": "./gyeol.css",
+    "./gyeol.min.css": "./gyeol.min.css",
+    "./min": "./gyeol.min.css",
     "./tokens.json": "./tokens.json",
     "./tailwind": "./tailwind.preset.cjs",
     "./package.json": "./package.json"
   },
   "files": [
     "gyeol.css",
+    "gyeol.min.css",
     "tokens.json",
     "tailwind.preset.cjs",
     "index.mjs",
@@ -63,5 +66,8 @@
     "tailwindcss": {
       "optional": true
     }
+  },
+  "scripts": {
+    "build": "python scripts/build.py"
   }
 }

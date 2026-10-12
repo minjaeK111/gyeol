@@ -10,7 +10,7 @@ npm install gyeol
 
 | 파일 | 쓰는 곳 |
 | --- | --- |
-| `gyeol.css` | 아무 웹 프로젝트(HTML, React, Vue, Svelte 등). 토큰, 팔레트, 테마, 겹 소재, 컴포넌트 클래스가 모두 들어 있어요. |
+| `gyeol.css` · `gyeol.min.css` | 아무 웹 프로젝트(HTML, React, Vue, Svelte 등). 토큰, 팔레트, 테마, 겹 소재, 컴포넌트 클래스가 모두 들어 있어요. |
 | `tailwind.preset.cjs` | Tailwind CSS 프로젝트. `gyeol.css`의 CSS 변수를 Tailwind 클래스로 연결해요. |
 | `tokens.json` | 디자인 토큰 표준(DTCG) 형식. Figma Tokens Studio, Style Dictionary, iOS·Android 변환에 써요. |
 
@@ -18,8 +18,8 @@ npm install gyeol
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gyeol@0.1.8/gyeol.css">
-<!-- 또는 unpkg: <link rel="stylesheet" href="https://unpkg.com/gyeol@0.1.8/gyeol.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gyeol@0.1.9/gyeol.css">
+<!-- 또는 unpkg: <link rel="stylesheet" href="https://unpkg.com/gyeol@0.1.9/gyeol.css"> -->
 
 <html data-palette="meok" data-theme="dark">
 <body class="gy">
@@ -30,12 +30,12 @@ npm install gyeol
 </body>
 ```
 
-CDN은 jsDelivr와 unpkg 중 하나를 쓰면 돼요. 버전을 빼고 `gyeol/gyeol.css`로 쓰면 항상 최신 버전을 불러오지만, 실제 서비스에서는 버전을 고정하는 게 안전해요.
+CDN은 jsDelivr와 unpkg 중 하나를 쓰면 돼요. 주석과 공백을 뺀 `gyeol.min.css`도 같은 경로에 있어요(0.1.9부터). 버전을 빼고 `gyeol/gyeol.css`로 쓰면 항상 최신 버전을 불러오지만, 실제 서비스에서는 버전을 고정하는 게 안전해요.
 
 | CDN | 주소 |
 | --- | --- |
-| jsDelivr | `https://cdn.jsdelivr.net/npm/gyeol@0.1.8/gyeol.css` |
-| unpkg | `https://unpkg.com/gyeol@0.1.8/gyeol.css` |
+| jsDelivr | `https://cdn.jsdelivr.net/npm/gyeol@0.1.9/gyeol.css` |
+| unpkg | `https://unpkg.com/gyeol@0.1.9/gyeol.css` |
 
 번들러(Vite, Next.js 등)를 쓰면 CSS를 이렇게 불러와요.
 
@@ -48,7 +48,7 @@ setTheme('light');
 color('meok', 'dark', 'accent'); // '#85aeff'
 ```
 
-- `data-palette`: `meok`(기본) · `jjok` · `cheongja` · `songhwa` · `yeonji` · `jaju` · `chija` · `hwangto` · `oksaek` · `haneul` · `odi`
+- `data-palette`: `meok`(기본) · `jjok` · `cheongja` · `songhwa` · `yeonji` · `jaju` · `chija` · `hwangto` · `oksaek` · `haneul` · `odi` · `ssuk` · `hongsi`
 
   | 팔레트 | 키 | 팔레트 | 키 |
   | --- | --- | --- | --- |
@@ -57,7 +57,8 @@ color('meok', 'dark', 'accent'); // '#85aeff'
   | 청자 | `cheongja` | 옥색 | `oksaek` |
   | 송화 | `songhwa` | 하늘 | `haneul` |
   | 연지 | `yeonji` | 오디 | `odi` |
-  | 자주 | `jaju` | | |
+  | 자주 | `jaju` | 쑥 | `ssuk` |
+  | 홍시 | `hongsi` | | |
 - `data-theme`: `dark`(기본) · `light` · `system`
 - 컴포넌트 클래스는 모두 `gy-` 접두사를 써서 기존 CSS와 겹치지 않아요.
 - 화면 일부만 다른 팔레트나 테마로 바꿀 수 있어요(0.1.2부터). 그 범위 안의 색과 글자색이 모두 다시 계산돼요.
@@ -133,6 +134,7 @@ HEX 값은 화면용 sRGB로 변환한 근사치예요. 웹에서는 `gyeol.css`
 | --- | --- |
 | `gyeol` | 토큰 객체와 `setPalette`, `setTheme`, `color` 함수 (ESM·CommonJS·TypeScript 타입 포함) |
 | `gyeol/gyeol.css` (또는 `gyeol/css`) | 전체 CSS |
+| `gyeol/gyeol.min.css` (또는 `gyeol/min`) | 줄인 CSS (내용은 같아요) |
 | `gyeol/tailwind` | Tailwind 프리셋 |
 | `gyeol/tokens.json` | DTCG 토큰 원본 |
 

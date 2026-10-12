@@ -1,6 +1,6 @@
 export type Palette =
   | "meok" | "jjok" | "cheongja" | "songhwa" | "yeonji" | "jaju"
-  | "chija" | "hwangto" | "oksaek" | "haneul" | "odi";
+  | "chija" | "hwangto" | "oksaek" | "haneul" | "odi" | "ssuk" | "hongsi";
 export type Theme = "dark" | "light" | "system";
 export type ColorMode = "light" | "dark";
 export type ColorRole =
